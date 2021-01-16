@@ -32,6 +32,11 @@ public class TestStringCalculator{
 		assertEquals("Number expected but '\n' found at position 6.", given("1,2,5,\n3"));
 	}
 
+	@Test
+	public void
+	return_error_msg_when_delimiter_at_last_position() {
+		assertEquals("Number expected but EOF found.", given("2,3,4.2,"));
+	}
 
 	private String given(String number) {
 		StringCalculator stringCalculator = new StringCalculator();
