@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
-public class TestStringCalculator {
+public class TestStringCalculator{
 	@Test
 	public void
 	return_0_when_input_is_empty() {
