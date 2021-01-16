@@ -23,9 +23,15 @@ public class TestStringCalculator{
 	}
 	@Test
 	public void
-	treat_newLine_as_a_delimiter() {
+	treat_newLine_as_a_delimiter(){
 		assertEquals("6", given("1\n2,3"));
 	}
+	@Test
+	public void
+	return_error_msg_when_newLine_at_invalid_position() {
+		assertEquals("Number expected but '\n' found at position 6.", given("1,2,5,\n3"));
+	}
+
 
 	private String given(String number) {
 		StringCalculator stringCalculator = new StringCalculator();
