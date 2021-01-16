@@ -45,6 +45,12 @@ public class TestStringCalculator{
 		assertEquals("8", given("//@@\n1@@2@@5"));
 		assertEquals("5", given("//sep\n2sep3"));
 	}
+	@Test
+	public void
+	return_string_of_negative_numbers_when_negative_numbers_are_used_as_input() {
+		assertEquals("Negative not allowed: -1", given("-1,2"));
+		assertEquals("Negative not allowed: -4,-5", given("2,-4,-5"));
+	}
 
 	private String given(String number) {
 		StringCalculator stringCalculator = new StringCalculator();
