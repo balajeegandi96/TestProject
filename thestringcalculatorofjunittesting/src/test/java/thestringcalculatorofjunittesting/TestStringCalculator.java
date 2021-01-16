@@ -16,6 +16,11 @@ public class TestStringCalculator{
 	return_3_when_input_is_1_2() {
 		assertEquals("3", given("1,2"));
 	}
+	@Test
+	public void
+	sum_floats_and_return_float() {
+		assertEquals("6.6", given("2.2,4.4"));
+	}
 
 	private String given(String number) {
 		StringCalculator stringCalculator = new StringCalculator();
