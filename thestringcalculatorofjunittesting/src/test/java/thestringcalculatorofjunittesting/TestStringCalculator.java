@@ -21,6 +21,11 @@ public class TestStringCalculator{
 	sum_floats_and_return_float() {
 		assertEquals("6.6", given("2.2,4.4"));
 	}
+	@Test
+	public void
+	treat_newLine_as_a_delimiter() {
+		assertEquals("6", given("1\n2,3"));
+	}
 
 	private String given(String number) {
 		StringCalculator stringCalculator = new StringCalculator();
